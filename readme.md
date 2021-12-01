@@ -3,3 +3,6 @@
 ## package 
 * `github.com/go-sql-driver/mysql v1.6.0`
 * `github.com/joho/godotenv v1.4.0`
+
+## Database Pooling `sql.DB`
+* Auto-management connection using golang database 

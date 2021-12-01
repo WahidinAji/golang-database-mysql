@@ -1,4 +1,4 @@
-package utils
+package config
 
 import (
 	"log"
@@ -12,9 +12,9 @@ func GetEnvWithKey(key string) string {
 	return os.Getenv(key)
 }
 
-func LoadEnv()  {
+func init()  {
 	//load .env file
-	err := godotenv.Load(".env")
+	err := godotenv.Load("../.env")
 	if err != nil {
 		log.Fatalf("Error loading .env file")
 		os.Exit(1)
