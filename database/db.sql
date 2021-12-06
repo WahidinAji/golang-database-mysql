@@ -39,6 +39,7 @@ CREATE TABLE comments(
 )ENGINE =InnoDB;
 DESC comments;
 SELECT * FROM comments;
+SELECT COUNT(*) FROM comments;
 
 
 
