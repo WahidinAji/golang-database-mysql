@@ -17,7 +17,8 @@ func GetConnection() *sql.DB {
 	host := get("DB_HOST")
 	port := get("DB_PORT")
 	dbname := get("DB_NAME")
-	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s",user,pass,host,port,dbname)
+	//parseTime=true digunakan untuk mengkonversi []uint dari db ke dateTime string. jadi si golang tidak perlu lagi convert manual.
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?parseTime=true",user,pass,host,port,dbname)
 	db, err := sql.Open("mysql",dsn)
 	if err != nil {
 		fmt.Println("Connection Failed!!!")
