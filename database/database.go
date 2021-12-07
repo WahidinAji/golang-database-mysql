@@ -9,6 +9,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
+/** database */
 
 func GetConnection() *sql.DB {
 	get := config.GetEnvWithKey
